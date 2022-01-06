@@ -1,0 +1,96 @@
+.main {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.date {
+  font-size: 2em;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.points {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.75em;
+}
+
+.points span {
+  background-color: #eee;
+  border-radius: 999px;
+  padding: 0.25em 0.75em;
+  transition-property: background-color, color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+.points.positive span {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.points.negative span {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.buttons {
+  margin-top: 1rem;
+}
+
+.button {
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 1em 2em;
+}
+
+.button + .button {
+  margin-top: 1em;
+}
+
+@media only screen and (max-width: 400px) {
+  .date {
+    font-size: 1.5em;
+  }
+
+  .button {
+    padding: 0.75em 1.5em;
+  }
+
+  .button + .button {
+    margin-top: 0.75em;
+  }
+}
+
+@keyframes wrongShake {
+  0% {
+    transform: translateX(-10px);
+  }
+  16% {
+    transform: translateX(9px);
+  }
+  33% {
+    transform: translateX(-6px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  66% {
+    transform: translateX(-2px);
+  }
+  83% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.wrong {
+  animation: 1s linear 0s 1 wrongShake;
+}
